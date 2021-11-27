@@ -1,6 +1,6 @@
 # Interface a 16x2 LCD to PIC16F877A microcontroller and display a Malayalam word
 
-In this Project, you will be learning and conduccting a practical experiments, for interfacing a 16x2 LCD with PIC16F877A microcontroller and displaying malayalam word (Custom character) in it.
+In this Project, you will be learning and conducting a practical experiment on interfacing a 16x2 LCD with PIC16F877A microcontroller and displaying malayalam word (Custom character) in it.
 
 # Farmers Market Finder
 
@@ -8,9 +8,16 @@ This project uses the Google Maps API and USDA National Farmers Market Directory
 
 ## Demo
 
-Use the app online at https://farmersmarkets.kelli.app
+Use the app online at https://omerk.github.io/lcdchargen/ or search for it in Google there are plenty available ( LCD hex generator)
 
-![Farmers Market Finder - Animated gif demo](src/img.gif)
+![HEX generator animated gif demo](src/img.gif)
+
+## Results
+
+![IMG](src/output1.jpg)
+
+![IMG](src/output2.jpg)
+
 
 ## Run Project Locally
 
