@@ -1,4 +1,6 @@
-This project was created for Udacity's Front End Nanodegree several years ago when they taught Knockout. Some people have contacted me about this project who are using it for learning purposes and have had trouble with getting the Google Maps API setup for free. See the latest that I found out about this under the "APIs Used" section below, but I can't guarantee it will still work so I am archiving this project.
+# Interface a 16x2 LCD to PIC16F877A microcontroller and display a Malayalam word
+
+In this Project, you will be learning and conduccting a practical experiments, for interfacing a 16x2 LCD with PIC16F877A microcontroller and displaying malayalam word (Custom character) in it.
 
 # Farmers Market Finder
 
