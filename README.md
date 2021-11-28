@@ -2,60 +2,68 @@
 
 In this Project, you will be learning and conducting a practical experiment on interfacing a 16x2 LCD with PIC16F877A microcontroller and displaying malayalam word (Custom character) in it.
 
-# Farmers Market Finder
+## 16x2 Dot Matrix LCD Controller IC HD44780:
 
-This project uses the Google Maps API and USDA National Farmers Market Directory API to create a mashup where visitors can search for Farmers Markets in the US by entering a zip code, then Farmers Markets near that zip code will be shown on the map. You can click on a marker or an item in the result list to view more info about the market such as address, schedule, and products.
+<p align="center">
+    <img src="https://i1.wp.com/www.synronic.com/wp-content/uploads/2020/07/lcd-16x2-01.jpg" width="350" height="250">
+</p>
 
-## Demo
+An LCD (Liquid Crystal Display) screen is a type of electronic display that can be used in a variety of ways. A 16x2 LCD display is a relatively basic module that can be found in a variety of devices and circuits. **A 16x2 LCD can display 16 characters per line on each of its two lines. Each character is presented in a 5x7 pixel matrix on this LCD**. The 224 distinct characters and symbols can be displayed on the 16 x 2 intelligent alphanumeric dot matrix display. Command and Data are the two registers on this LCD
 
-Use the app online at https://omerk.github.io/lcdchargen/ or search for it in Google there are plenty available ( LCD hex generator)
+**In order for a custom character to be displayed, the IC has to be informed about the custom character's appearance. To accomplish so, the understanding of the HD44780 LCD controller IC's three types of memory is required:**
+   #### 1. Character Generator ROM (CGROM):
+   #### 2. Display Data RAM (DDRAM): 
+   #### 3. Character generator RAM (CGRAM):
+   
+<p align="center">
+    <img src="https://openlabpro.com/wp-content/uploads/2018/05/lcd_CGROM.jpg">
+</p>
 
-![HEX generator animated gif demo](src/img.gif)
+As, the datasheet implies, the HD44780 IC has provided as 8 Locations to store the custom patterns in CGRAM, also on the right, can view that there are some pre-defined characters which can also be displayed on the LCD Screen. **Two create a custom charter byself, Simply put a ‘1’ on the shaded region and a ‘0’ on the un-shaded region for each byte i.e across the 5x7 of each matrix** ( making upto 8 matrix of the 16 characters), and that is it the custom pattern is ready
 
-## Results
+<p align="center">
+    <img src="https://imgur.com/8CKXNci.jpg">
+</p>
 
-![IMG](src/output1.jpg)
+## Demo to create a character
 
-![IMG](src/output2.jpg)
+Use the app online at https://omerk.github.io/lcdchargen/ or search for options in Google there are many available ( LCD hex generator)
 
+<p align="center">
+    <img src="src/img.gif">
+</p>
 
-## Run Project Locally
+Now that , we have created the binary for our character, copy and replace them under the function ```const unsigned short Custom_Char5x8[]``` in the code
 
-Assumes local installation of [Node.js](https://nodejs.org)
+**NOTE:- Each character binary should be placed in each line, and maximum of eight characters**
 
-To run the project locally:
+## Circuit diagram for Connecting LCD and PIC16f877A
 
-* Clone or fork this repository.
-* Update `YOUR_KEY_GOES_HERE` on the following line (right above the closing body tag) in `src\index.html` with your [Google Maps JavaScript API key](https://developers.google.com/maps/documentation/javascript/get-api-key):<br>
-`<script async defer src="http://maps.googleapis.com/maps/api/js?v=3?key=YOUR_KEY_GOES_HERE&callback=init" onerror="mapLoadError()"></script>`  
-__Note: Google now requires a billing account to be setup for using the Google Maps API. See [Get Started with Google Maps Platform](https://developers.google.com/maps/gmp-get-started) for more information.__
-* Run `npm install`
-* Run `npm run build` (Also run this after changes are made to code in the `src` directory - the production code will then be output to a `dist` directory.)
-* Open `index.html` in the `dist` directory in a web browser.
+<p align="center">
+    <img src="src/output1.jpg">
+</p>
 
-## Technologies Used
-* JavaScript
-* [jQuery](https://jquery.com)
-* [Bootstrap](http://getbootstrap.com)
-* [Knockout](https://knockoutjs.com)
-* [Grunt](http://gruntjs.com)
-  * Grunt Plugins:
-    * [cssmin](https://github.com/gruntjs/grunt-contrib-cssmin)
-    * [uglify](https://github.com/gruntjs/grunt-contrib-uglify)
-    * [copy](https://github.com/gruntjs/grunt-contrib-copy)
+<p align="center">
+    <img src="src/output2.jpg" width="250" height="150">
+</p>
 
-
-## APIs Used
-* [USDA National Farmers Market Directory API](https://search.ams.usda.gov/farmersmarkets/v1/svcdesc.html) - No API Key needed, but see [API Terms of Service](https://search.ams.usda.gov/farmersmarkets/v1/APITOS.html) which has text for the required attribution.
-* [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial) - a [Google Maps JavaScript API key](https://developers.google.com/maps/documentation/javascript/get-api-key) is required.  
-__Note: Google now requires a billing account to be setup for using the Google Maps API. See [Get Started with Google Maps Platform](https://developers.google.com/maps/gmp-get-started) for more information.__
-
-Note: If you put the project online, you should restrict the websites that the Google Maps JavaScript API key will work on since this is a Front-End only app and the key will be visible in the source code. To do this, go to your project in the [Google Cloud Console](https://console.cloud.google.com) and under APIs & Services > Credentials > Choose API Key: look under Application restrictions > Website restrictions where you can add websites that the key will work on.
 
 ## License
 
-The code in this project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+The code in this project have been made with references. It is free and open to use for all. And thanks for your valuable time in reading this blog. **Project code and simulation files can be downloaded from the link given below.**
+
+Few references are :
+
+[1. Circuit Digest](https://circuitdigest.com/microcontroller-projects/custom-characters-on-lcd-using-pic16f877a)
+
+[2. Openlabpro](https://openlabpro.com/guide/custom-character-lcd-pic/)
 
 Note that you will be responsible for following terms of service of the third party APIs used in the code. 
+<p align="center">
+  <b>DOWNLOAD THE PROJECT FOLDER </b><br>
+  <a href="https://github.com/Bggopal/Interface-lcd-display-malayalam-words/archive/refs/heads/main.zip">HERE</a> 
+  <br><br>
+</p>
 
+  
 
